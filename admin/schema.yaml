@@ -1,0 +1,20 @@
+---
+ilike: 
+  version: 0.0.0
+  required: false
+  requirements: 
+    liberty: 
+      min: 2.1.4
+  description: >
+    A very simple search engine. Only makes sense on small sites since it searches the database directly without any abstraction layer.
+  license: 
+    name: LGPL
+    description: Licensed under the GNU LESSER GENERAL PUBLIC LICENSE.
+    url: http://www.gnu.org/copyleft/lesser.html 
+  homeable: false
+  permissions: 
+    p_ilike_search: 
+      description: >
+        Can search your site using the search
+        engine
+      level: basic
