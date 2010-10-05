@@ -12,7 +12,9 @@ $feedback = array();
 if( empty( $contentTypes ) ) {
 	$contentTypes = array( '' => tra( 'All Content' ) );
 	foreach( $gLibertySystem->mContentTypes as $cType ) {
-		$contentTypes[$cType['content_type_guid']] = $gLibertySystem->getContentTypeName( $cType['content_type_guid'] );
+		if ($gLike->hasViewPermission($cType['content_type_guid'])) {
+			$contentTypes[$cType['content_type_guid']] = $gLibertySystem->getContentTypeName( $cType['content_type_guid'] );
+		}
 	}
 }
 $gBitSmarty->assign( 'contentTypes', $contentTypes );
