@@ -12,8 +12,6 @@ $gBitSystem->registerPackage( $registerHash );
 
 if( $gBitSystem->isPackageActive( 'ilike' ) && $gBitUser->hasPermission( 'p_ilike_search' ) ) {
 
-	require_once( ILIKE_PKG_PATH.'iLike.php' );
-
 	$menuHash = array(
 		'package_name'  => ILIKE_PKG_NAME,
 		'index_url'     => ILIKE_PKG_URL.'index.php',
@@ -21,9 +19,13 @@ if( $gBitSystem->isPackageActive( 'ilike' ) && $gBitUser->hasPermission( 'p_ilik
 	);
 	$gBitSystem->registerAppMenu( $menuHash );
 
+	/*
+	require_once( ILIKE_PKG_PATH.'iLike.php' );
+
 	$gLibertySystem->registerService( LIBERTY_SERVICE_ILIKE, ILIKE_PKG_NAME, array(
 		'content_list_sql_function' => 'ilike_content_list_sql',
 		'content_search_tpl'		=> 'bitpackage:ilike/search_inc.tpl'
 	) );
+	*/
 }
 ?>

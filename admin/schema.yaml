@@ -1,10 +1,10 @@
 ---
 ilike: 
-  version: 0.0.0
+  version: 0.0.1
   required: false
   requirements: 
     liberty: 
-      min: 2.1.4
+      min: 2.1.7
   description: >
     A very simple search engine. Only makes sense on small sites since it searches the database directly without any abstraction layer.
   license: 
@@ -18,3 +18,11 @@ ilike:
         Can search your site using the search
         engine
       level: basic
+  plugins:
+    ilike_search:
+      handler_file: iLike.php
+      api_handlers:
+        sql:
+          content_list_sql: ilike_content_list_sql
+        tpl:
+          content_search: 'bitpackage:ilike/search_inc.tpl'
