@@ -10,7 +10,7 @@ $registerHash = array(
 );
 $gBitSystem->registerPackage( $registerHash );
 
-if( $gBitSystem->isPackageActive( 'ilike' ) && $gBitUser->hasPermission( 'p_ilike_search' ) ) {
+if( $gBitSystem->isPackageActive( 'ilike' ) ){ //&& $gBitUser->hasPermission( 'p_ilike_search' ) ) {
 
 	$menuHash = array(
 		'package_name'  => ILIKE_PKG_NAME,
