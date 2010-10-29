@@ -8,7 +8,7 @@
 				{html_options options=$contentTypes name="content_type_guid" selected=$gContent->mContentTypeGuid}
 			</div>
 
-			<div class="row submit">
+			<div class="buttonHolder row submit">
 				<input type="submit" name="search" value="{tr}Go{/tr}" />
 			</div>
 		{/form}

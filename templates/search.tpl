@@ -24,7 +24,7 @@
 				{/forminput}
 			</div>
 
-			<div class="row submit">
+			<div class="buttonHolder row submit">
 				<input type="submit" class="wikiaction" name="search" value="{tr}go{/tr}"/>
 			</div>
 
